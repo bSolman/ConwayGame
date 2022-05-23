@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CellLogic {
-    private final List<ICell> CELLS_ALIVE = new ArrayList<>();
+    private final List<ICell> ACTIVE_CELLS = new ArrayList<>();
     private boolean[][] cellStatusArray;
 
     public CellLogic(int rows, int columns) {
@@ -21,18 +21,18 @@ public class CellLogic {
     }
     public void createCell(int posX, int posY, boolean isAlive){
         if (isAlive){
-            CELLS_ALIVE.add(new AliveCell(posX, posY, true));
+            ACTIVE_CELLS.add(new AliveCell(posX, posY, true));
         }else {
-            CELLS_ALIVE.add(new DeadCell(posX, posY, false));
+            ACTIVE_CELLS.add(new DeadCell(posX, posY, false));
         }
     }
 
     public void setCellStatusArray(int posX, int posY, boolean value) {
-        cellStatusArray[posX][posY] = value;
+        cellStatusArray[posY][posX] = value;
     }
 
     public List<ICell> getAllCells(){
-        return CELLS_ALIVE;
+        return ACTIVE_CELLS;
     }
 
     public void setCellAliveStatus(ICell cell){
@@ -42,8 +42,8 @@ public class CellLogic {
     public short setNrOfCellAliveNeighbours(@NotNull ICell iCell){
         int startX = setStartPosWithinBorder(iCell.getPOS_X());
         int startY = setStartPosWithinBorder(iCell.getPOS_Y());
-        int endX = setEndPosWithinBorder(iCell.getPOS_X());
-        int endY = setEndPosWithinBorder(iCell.getPOS_Y());
+        int endX = setEndPosWithinBorderX(iCell.getPOS_X());
+        int endY = setEndPosWithinBorderY(iCell.getPOS_Y());
         short count = 0;
 
         for (int i = startY; i <= endY; i++){
@@ -60,12 +60,17 @@ public class CellLogic {
         return count;
     }
 
+    private int setEndPosWithinBorderY(int pos_y) {
+        int retVal = pos_y + 1;
+        return Math.min(retVal, cellStatusArray.length - 1);
+    }
+
     public int setStartPosWithinBorder(int pos) {
         int retVal = pos - 1;
         return Math.max(retVal, 0);
     }
 
-    public int setEndPosWithinBorder(int pos) {
+    public int setEndPosWithinBorderX(int pos) {
         int retVal = pos + 1;
         return Math.min(retVal, cellStatusArray[0].length - 1);
     }

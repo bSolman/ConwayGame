@@ -9,8 +9,8 @@ import java.util.List;
 public class Screen extends JPanel {
     private final GameController GAME_CONTROLLER;
 
-    public Screen(int width, int height, int seeds){
-        GAME_CONTROLLER = new GameController(width, height, seeds);
+    public Screen(int height, int width, int seeds){
+        GAME_CONTROLLER = new GameController(height, width, seeds);
     }
 
     public void paintComponent(Graphics graphics){

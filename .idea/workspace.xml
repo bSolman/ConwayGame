@@ -9,15 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ab1438-8fbf-4181-8a65-7be2329aa0d3" name="Changes" comment="So here it is. In some glory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/EvilCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/FunCell.java" afterDir="false" />
+    <list default="true" id="00ab1438-8fbf-4181-8a65-7be2329aa0d3" name="Changes" comment="Create README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/ConwayGame_jar/ConwayGame.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ConwayGame_jar/ConwayGame.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/AliveCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/AliveCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/DeadCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/entity/DeadCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/conway/cellInterface/ICell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/cellInterface/ICell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/conway/logic/CellLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/conway/logic/CellLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/game/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/game/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/solman/game/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/solman/game/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gameController/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gameController/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/logic/CellLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/logic/CellLogicTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,8 +160,18 @@
       <workItem from="1653206608420" duration="3557000" />
       <workItem from="1653223377255" duration="2832000" />
       <workItem from="1653241914961" duration="650000" />
-      <workItem from="1653292273431" duration="350000" />
+      <workItem from="1653292273431" duration="905000" />
+      <workItem from="1653294012157" duration="1199000" />
+      <workItem from="1653307500282" duration="2561000" />
+      <workItem from="1653394154265" duration="2908000" />
     </task>
+    <task id="LOCAL−00001" summary="Create README.md">
+      <created>1653292839342</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1653292839342</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,25 +190,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="So here it is. In some glory" />
-    <option name="LAST_COMMIT_MESSAGE" value="So here it is. In some glory" />
+    <MESSAGE value="Implemented a Cell super class" />
+    <MESSAGE value="Create README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/solman/game/Screen.java</url>
-          <line>25</line>
-          <properties class="org.solman.game.Screen" method="runDraw">
+          <url>file://$PROJECT_DIR$/src/main/java/org/solman/game/GameController.java</url>
+          <line>36</line>
+          <properties class="org.solman.game.GameController" method="initCells">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/solman/game/Screen.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/solman/game/GameController.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

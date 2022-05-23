@@ -5,7 +5,6 @@ public interface ICell {
     int getNrOfNeighbours();
     void setNrOfNeighbours(int nrOfNeighbours);
     void setAliveStatus();
-
     int getPOS_X();
     int getPOS_Y();
 }

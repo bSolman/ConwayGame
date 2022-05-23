@@ -9,9 +9,9 @@ import java.util.Random;
 
 public class GameController {
     private final CellLogic CELL_LOGIC;
-    public GameController(int width, int height, int seeds){
-        this.CELL_LOGIC = new CellLogic(width, height);
-        initCells(width, height, seeds);
+    public GameController(int height, int width, int seeds){
+        this.CELL_LOGIC = new CellLogic(height, width);
+        initCells(height, width, seeds);
     }
 
     public List<ICell> getCellList(){
@@ -34,7 +34,7 @@ public class GameController {
                 .forEach(CELL_LOGIC::setCellAliveStatus);
     }
 
-    protected void initCells(int width, int height, int seeds) {
+    protected void initCells(int height, int width, int seeds) {
         Random random = new Random();
         for (int i = 0; i < seeds; i++){
             int x = random.nextInt(width);

@@ -38,7 +38,7 @@ class CellLogicTest {
     @DisplayName("Check end boundary")
     void setEndPosWithinBorder(int expected, int x){
         CELL_LOGIC.setCellStatusArray(TEST_ARRAY);
-        assertEquals(expected, CELL_LOGIC.setEndPosWithinBorder(x));
+        assertEquals(expected, CELL_LOGIC.setEndPosWithinBorderX(x));
     }
 
     @ParameterizedTest
